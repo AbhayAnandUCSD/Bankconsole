@@ -1,0 +1,14 @@
+C:\Users\Abhay.Anand\dotnet\Bankconsole\bin\Debug\net8.0\Bankconsole.exe
+C:\Users\Abhay.Anand\dotnet\Bankconsole\bin\Debug\net8.0\Bankconsole.deps.json
+C:\Users\Abhay.Anand\dotnet\Bankconsole\bin\Debug\net8.0\Bankconsole.runtimeconfig.json
+C:\Users\Abhay.Anand\dotnet\Bankconsole\bin\Debug\net8.0\Bankconsole.dll
+C:\Users\Abhay.Anand\dotnet\Bankconsole\bin\Debug\net8.0\Bankconsole.pdb
+C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\Bankconsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\Bankconsole.AssemblyInfoInputs.cache
+C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\Bankconsole.AssemblyInfo.cs
+C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\Bankconsole.csproj.CoreCompileInputs.cache
+C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\Bankconsole.dll
+C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\refint\Bankconsole.dll
+C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\Bankconsole.pdb
+C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\Bankconsole.genruntimeconfig.cache
+C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\ref\Bankconsole.dll
