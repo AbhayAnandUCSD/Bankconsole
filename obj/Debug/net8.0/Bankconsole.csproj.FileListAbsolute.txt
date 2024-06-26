@@ -12,3 +12,4 @@ C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\refint\Bankconsole.dll
 C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\Bankconsole.pdb
 C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\Bankconsole.genruntimeconfig.cache
 C:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\ref\Bankconsole.dll
+c:\Users\Abhay.Anand\dotnet\Bankconsole\obj\Debug\net8.0\Bankconsole.sourcelink.json

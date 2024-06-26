@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Linq;
 
 namespace BankConsole // Corrected namespace declaration
 {
@@ -129,34 +130,25 @@ namespace BankConsole // Corrected namespace declaration
 
             Console.WriteLine("Welcome to the simple ATM");
             Console.WriteLine("Please insert card: ");
-            String debitnum = "";
-            CardHolder currentUser;
+            string debitnum = Console.ReadLine();
 
-            while(true){
-                try{
-                    debitnum = Console.ReadLine();
-                    currentUser = cardHolders.FirstOrDefault(a => a.getCardnum() == debitnum);
-                    if(currentUser != null) {break;}
-                    else {Console.WriteLine("Card Number not recognised, Please try again");}
-                }
-                catch{
-                    Console.WriteLine("Card Number not recognised, Please try again");
-                }
-            }
-            Console.WriteLine("Please enter your PIN: ");
-            int userPin = 0;
-            while(true)
+            CardHolder currentUser = cardHolders.Where(p => p.getCardnum() == debitnum).FirstOrDefault();
+            if (currentUser == null)
             {
-             try{
-                userPin = int.Parse(Console.ReadLine());
-                if(userPin == currentUser.getPin()) {break;}
-                else {Console.WriteLine("Incorrect PIN, Please try again");}
+                Console.WriteLine("Card Number not recognised, Please try again");
+                return;
             }
-            catch{
-                Console.WriteLine("Incorrect PIN, Please try again");
+
+            Console.WriteLine("Please enter your PIN: ");
+            int userPin = Convert.ToInt32(Console.ReadLine());
+
+            if(currentUser.getPin() != userPin){
+                Console.WriteLine("Pin is incorrect, please try again.");
+                return;
             }
-            }
-            Console.WriteLine("Welcome: " + currentUser.getFirstname());
+
+
+            Console.WriteLine($"Welcome: {currentUser.getFirstname()}");
             int option = 0;
             do
             {
