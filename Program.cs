@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Linq;
+using System.Text.Json;
 
 namespace BankConsole // Corrected namespace declaration
 {
     public class CardHolder
     {
-        string firstname;
-        string lastname;
-        string cardnum;
-        int pin;
-        double balance; 
+        public string firstname { get; set; }
+        public string lastname { get; set; }
+        public string cardnum { get; set; }
+        public int pin { get; set; }
+        public double balance { get; set; }
 
         public CardHolder(string firstname, string lastname, string cardnum, int pin, double balance) // Corrected 'balence' to 'balance'
         {
@@ -21,6 +22,11 @@ namespace BankConsole // Corrected namespace declaration
             this.pin = pin;
             this.balance = balance;
         }
+        public override string ToString()
+        {
+            return $"FirstName: {firstname}, LastName: {lastname}, CardNum: {cardnum}, PIN: {pin}, Balance: {balance}";
+        }
+
 
         public string getFirstname()
         {
@@ -70,6 +76,23 @@ namespace BankConsole // Corrected namespace declaration
     {
         static void Main(string[] args)
         {
+            string filepath = @"C:\Users\Abhay.Anand\FinalConsole(Bank)\trial.json";
+
+            string jsonString = File.ReadAllText(filepath);
+
+            List<CardHolder> records = JsonSerializer.Deserialize<List<CardHolder>>(jsonString);
+
+            List<CardHolder> cardHolders = new List<CardHolder>();
+
+            foreach (var record in records)
+            {
+                cardHolders.Add(record);
+                Console.WriteLine(record);
+            }
+
+            
+
+
             void printOptions()
             {
                 Console.WriteLine("Choose one of the options below:");
@@ -121,12 +144,6 @@ namespace BankConsole // Corrected namespace declaration
                 Console.WriteLine($"Hi {currentUser.getFirstname()}, your current balance is: {currentUser.getBalance()}");
             }
 
-            List<CardHolder> cardHolders = new List<CardHolder>();
-            cardHolders.Add(new CardHolder("John", "Doe", "J1234", 1234, 500.75));
-            cardHolders.Add(new CardHolder("Jane", "Smith", "S5678", 9876, 1200.50));
-            cardHolders.Add(new CardHolder("Alice", "Johnson", "A9999", 5555, 800.00));
-            cardHolders.Add(new CardHolder("Bob", "Brown", "B2468", 1357, 300.25));
-            cardHolders.Add(new CardHolder("Eve", "Williams", "W1357", 2468, 1000.00));
 
             Console.WriteLine("Welcome to the simple ATM");
             Console.WriteLine("Please insert card: ");
